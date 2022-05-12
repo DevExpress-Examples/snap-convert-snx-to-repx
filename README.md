@@ -1,3 +1,7 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/491023724/21.2.7%2B)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Snap – Convert Your SNX Reports to REPX Files
 
 As you may already know the [WinForms Snap](https://docs.devexpress.com/WindowsForms/11373/controls-and-libraries/snap) control is now in maintenance support mode. No new features and capabilities are incorporated into this product. We strongly recommend that you use our feature-rich [DevExpress Reporting](https://docs.devexpress.com/XtraReports/2162/reporting) tool to generate, edit, print, and export your business reports.
