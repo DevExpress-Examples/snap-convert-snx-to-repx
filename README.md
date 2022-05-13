@@ -15,7 +15,7 @@ Download and run this application. Select an SNX file you need to convert to REP
 
 ![Snap - SNX to REPX Converter](./images/snap-report-converter.png)
 
-Handle the ConfigureDataConnection event if you need to update connection settings for your data source. Refer to the following help topic for details: [SqlDataSource.ConfigureDataConnection](https://docs.devexpress.com/CoreLibraries/DevExpress.DataAccess.Sql.SqlDataSource.ConfigureDataConnection).
+Handle the [ConfigureDataConnection](https://github.com/DevExpress-Examples/snap-convert-snx-to-repx/blob/21.2.7%2B/CS/SnxToRepx/MainForm.cs#L62) event if you need to update connection settings for your data source. Refer to the following help topic for details: [SqlDataSource.ConfigureDataConnection](https://docs.devexpress.com/CoreLibraries/DevExpress.DataAccess.Sql.SqlDataSource.ConfigureDataConnection).
 
 ## Limitations
 
