@@ -1,6 +1,7 @@
 Imports DevExpress.Snap
 Imports DevExpress.Snap.Core.API
 Imports DevExpress.XtraReports.UI
+Imports System.Linq
 
 Namespace SnxToRepx.Converter
 
@@ -210,7 +211,7 @@ Namespace SnxToRepx.Converter
                     tempServer.SnxBytes = template.SaveDocument(DevExpress.Snap.Core.API.SnapDocumentFormat.Snap)
                     'Copy data sources
                     For i As Integer = 0 To Me.server.Document.DataSources.Count - 1
-                        If Me.server.Document.DataSources(CInt((i))).DataSource IsNot Nothing Then tempServer.Document.DataSources.Add(Me.server.Document.DataSources(i))
+                        If Me.server.Document.DataSources(CInt((i))).DataSource IsNot Nothing AndAlso Not tempServer.Document.DataSources.Any(Function(ds) Equals(ds.DataSourceName, Me.server.Document.DataSources(CInt((i))).DataSourceName)) Then tempServer.Document.DataSources.Add(Me.server.Document.DataSources(i))
                     Next
 
                     'Create a SnapLayoutProcessor instance and process the document layout
