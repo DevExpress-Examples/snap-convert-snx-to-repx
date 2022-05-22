@@ -1,6 +1,7 @@
 ﻿using DevExpress.Snap;
 using DevExpress.Snap.Core.API;
 using DevExpress.XtraReports.UI;
+using System.Linq;
 
 namespace SnxToRepx.Converter
 {
@@ -234,7 +235,9 @@ namespace SnxToRepx.Converter
                     tempServer.SnxBytes = template.SaveDocument(SnapDocumentFormat.Snap);
                     //Copy data sources
                     for (int i = 0; i < server.Document.DataSources.Count; i++)
-                        if (server.Document.DataSources[i].DataSource != null)
+                        if (server.Document.DataSources[i].DataSource != null &&
+                            !tempServer.Document.DataSources.Any((ds) =>
+                            ds.DataSourceName == server.Document.DataSources[i].DataSourceName))
                             tempServer.Document.DataSources.Add(server.Document.DataSources[i]);
                     //Create a SnapLayoutProcessor instance and process the document layout
                     SnapLayoutProcessor processor = new SnapLayoutProcessor(generator, tempServer);
